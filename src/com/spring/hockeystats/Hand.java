@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Hand {
 
-    public ArrayList<Die> hand;
+    private ArrayList<Die> hand;
 
     @Override
     public String toString() {
@@ -15,15 +15,17 @@ public class Hand {
         //for each loop calling each dies toString method
     }
 
-    public Hand(ArrayList<Die> hand) {
-        this.hand = hand;
+    public Hand(int numOfDies) {
+        ArrayList<Die> newHand = new ArrayList<>();
+        for(int i = numOfDies; i > 0; i--){
+            Die die = new Die();
+            newHand.add(die);
+        }
+        this.hand = newHand;
     }
 
     public ArrayList<Die> getHand() {
         return hand;
     }
 
-    public void setHand(ArrayList<Die> hand) {
-        this.hand = hand;
-    }
 }

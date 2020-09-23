@@ -8,14 +8,8 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
-        ArrayList<Die> list = new ArrayList<>();
 
-        for(int i = 0; i < 5; i++){
-            Die die = new Die();
-            list.add(die);
-        }
-
-        Hand hand1 = new Hand(list);
+        Hand hand1 = new Hand(5);
 
         Scanner in = new Scanner(System.in);
 
